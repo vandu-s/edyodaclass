@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function main() {
+            var subject1_mark = parseInt(window.prompt('Enter the marks of sub1'));
+            var subject2_mark = parseInt(window.prompt('Enter the marks of sub2'));
+            var subject3_mark = parseInt(window.prompt('Enter the marks of sub3'));
+            var subject4_mark = parseInt(window.prompt('Enter the marks of sub4'));
+            var subject5_mark = parseInt(window.prompt('Enter the marks of sub5'));
+            // write your code here
+            var average = (subject1_mark + subject2_mark + subject3_mark + subject4_mark + subject5_mark) / 5;
+            var average = parseInt(average);
+            if (average < 40) {
+                console.log('F')
+
+            } else if ((average >= 40) && (average < 50)) {
+                console.log('C')
+
+
+            }
+            if ((average >= 50) && (average < 60)) {
+                console.log('C+')
+
+
+
+            } else
+            if ((average >= 60) && (average < 70)) {
+                console.log('B')
+
+
+
+            } else if ((average >= 70) && (average < 80)) {
+                console.log('B+')
+
+
+
+            } else if ((average >= 80) && (average < 90)) {
+                console.log('A')
+
+
+
+            } else if (average >= 90) {
+                console.log('A+')
+
+
+            }
+            return console.log(average);
+
+        }
+        main();
+    </script>
+
+</body>
+
+</html>

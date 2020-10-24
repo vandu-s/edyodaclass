@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var total_classes = parseInt(window.prompt('Enter the value of total class'))
+        var attended_classes = parseInt(window.prompt('Enter the value of attended class'))
+        var medical_cause = window.prompt('medical cause Y or N');
+        var perAttanced = (attended_classes / total_classes) * 100;
+        if (medical_cause == 'Y') {
+            if (perAttanced < 60) {
+                console.log('false')
+            } else {
+                console.log('true')
+            }
+        } else
+
+        if (medical_cause == 'N') {
+            if (perAttanced < 75) {
+                console.log('false')
+
+            } else {
+                console.log('true')
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

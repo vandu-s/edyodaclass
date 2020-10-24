@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //global variable
+        var i = 'I am Global variable ';
+
+        function show1() {
+            console.log('inside fun ' + i)
+        }
+        show1();
+
+
+        function show() {
+            console.log('inside fun ' + i)
+        }
+        show();
+        console.log('outside fun ' + i)
+        if (true) {
+            console.log('outside fun if statement ' + i)
+
+        }
+        //Local variabel
+        console.log('------localvariable------')
+
+        function local() {
+            var j = 'i am local var';
+            console.log(j);
+        }
+        local();
+    </script>
+
+</body>
+
+</html>

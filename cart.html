@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var items = parseInt(window.prompt('enter the no of items'));
+        var price = 150;
+        var totalCost = items * price;
+        var discount = (totalCost * 10) / 100;
+        if (totalCost > 999) {
+            if (discount > 200) {
+                totalCost = totalCost - 200;
+            } else {
+                totalCost = totalCost - discount;
+
+            }
+            console.log(totalCost);
+
+        } else {
+            console.log(totalCost);
+
+        }
+    </script>
+</body>
+
+</html>

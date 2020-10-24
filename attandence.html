@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*A student will not be allowed to sit in the exam if his/her attendance is less than 75%.
+                                                                                                                                                                                                                                         if he/she has medical cause reduce attendance criteria to 60%. Ask the user if he/she has a medical cause or not ( 'Y' or 'N' ) and print accordingly. You were given total no classes and total classes attended by the student.
+                                                                                                                                                                                                                                        Input Format:
+                                                                                                                                                                                                                                        The first line contains integer
+                                                                                                                                                                                                                                         total_classes and the second line contains integer attended_classes and the tired line contains string medical cause Y or N.
+                                                                                                                                                                                                                                        Output Format:
+                                                                                                                                                                                                                                        Print "True" or "False" without quotes.*/
+        var total_classes = parseInt(window.prompt('Enter the total number of classes'));
+        var attended_classes = parseInt(window.prompt('Enter the attanded number of classes'));
+        var medical_cause = window.prompt('medical Cause Y or N');
+        var totalAttendence = (attended_classes * 100) / total_classes;
+        console.log('total classes=', total_classes);
+        console.log('attended classes=', attended_classes);
+        console.log('medical cause=', medical_cause);
+        console.log('totalattanced=', totalAttendence + '%');
+        if ((medical_cause = 'Y') && (totalAttendence < 60)) {
+            console.log(true);
+
+        } else if ((medical_cause = 'N') && (totalAttendence >= 60)) {
+            console.log(false)
+
+        } else if ((medical_cause = 'N') && (totalAttendence < 75)) {
+            console.log(false)
+
+        } else if ((medical_cause = 'N') && (totalAttendence >= 75)) {
+            console.log(true)
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = parseInt(window.prompt('Enter the value of X')) // readonly
+        var y = parseInt(window.prompt('Enter the value of Y')) // readonly
+        var z = parseInt(window.prompt('Enter the value of Y')) // readonly
+        if ((x === y) && (y === z) && (z === x)) {
+            console.log('equilateral');
+        } else if ((x === y) || (y === z) || (z === x)) {
+            console.log('isosceles ');
+        } else {
+            console.log('obtuse ');
+
+        }
+    </script>
+</body>
+
+</html>
