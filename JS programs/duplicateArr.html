@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function removeDuplicateItem(mArr) {
+            var result = [];
+            for (i = 0; i <= mArr.length; i++) {
+                if (result.includes(mArr[i] !== mArr[i])) {
+                    result.push(mArr[i]);
+                }
+
+            }
+            console.log(result);
+
+        }
+        removeDuplicateItem([22, 32, 43, 55, 75, 38, 93, 22, 44, 32]);
+    </script>
+
+
+
+</body>
+
+</html>

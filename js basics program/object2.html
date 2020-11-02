@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var athlete = {
+            firstName: 'Marry',
+            lastName: 'Kom',
+            age: 35,
+            sport: 'Boxing',
+            experience: 10,
+            "spaouse name": 'K Onler Kom',
+            getfullname: function() {
+                console.log(this.firstName + ' ' + this.lastName);
+            },
+            getalldetails: function() {
+                console.log('firstname:', this.firstName + ' lastname:', this.lastName + ' age:', this.age + ' sport:', this.sport + ' experience:', this.experience);
+            },
+            getSum: function(a, b) {
+                return a + b;
+            },
+            getCountry: function() {
+                console.log('countey=' + this.country + ' age=' + this.age + ' expirence=' + this.experience);
+
+
+            }
+        }
+        athlete.country = 'india';
+        console.log(athlete.getCountry());
+        console.log(athlete.firstName + ' ' + athlete.lastName + athlete["spaouse name"]);
+        console.log(athlete.getSum(9800, 500));
+        // var studentMarks = {};
+        // studentMarks.ram = 200;
+        // studentMarks.shyam = 300;
+        // studentMarks.mohan = 500;
+        // studentMarks["total marks"] = 500;
+        // studentMarks.sum = function() {
+        //     console.log('Hello i m method');
+        //     return (100 + 200);
+        // };
+        // console.log(studentMarks.ram + ' ' + studentMarks["total marks"]);
+        // console.log('-------------------')
+        // console.log(studentMarks.sum());
+        var studentMarks = new Object;
+
+        studentMarks.ram = 200;
+        studentMarks.shyam = 200;
+        studentMarks.mohan = 900;
+        studentMarks["total marks"] = 500;
+        studentMarks.sum = function() {
+            console.log('Hello i m method object as constructor');
+            return (100 + 800);
+        };
+        console.log(studentMarks.ram + ' ' + studentMarks["total marks"]);
+        console.log('-------------------')
+        console.log(studentMarks.sum());
+    </script>
+</body>
+
+</html>

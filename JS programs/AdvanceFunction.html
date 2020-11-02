@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getMilk(money, costPerBottle) {
+
+            console.log('buy ' + calcBottles(money, costPerBottle) + ' Bottles of Milk')
+            return calcChange(money, costPerBottle);
+        }
+        console.log('hello master, here is our ' + getMilk(37, 2.5) + '$' + ' change');
+
+        function calcChange(startingMoney, costPerBottle) {
+            var change = startingMoney % costPerBottle;
+            return change;
+        }
+
+        function calcBottles(startingMoney, costPerBottle) {
+            var numberOfBottles = Math.round(startingMoney / costPerBottle);
+            return numberOfBottles;
+        }
+    </script>
+
+</body>
+
+</html>

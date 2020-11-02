@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sortString(str) {
+            var i = 0,
+                j = 0;
+            var newStr1 = '';
+            var newStr2 = '';
+
+            while (i <= str.length) {
+                if ((str.charAt(i) === 'a') || (str.charAt(i) === 'e') || (str.charAt(i) === 'i') || (str.charAt(i) === 'o') || (str.charAt(i) === 'u')) {
+                    newStr1 += str.charAt(i)
+                        // console.log(newStr1)
+
+                }
+
+                i++
+
+            }
+            while (j <= str.length) {
+                if ((str.charAt(j) != 'a') && (str.charAt(j) != 'e') && (str.charAt(j) != 'i') && (str.charAt(j) != 'o') && (str.charAt(j) != 'u')) {
+                    newStr2 += str.charAt(j)
+                        //   console.log(newStr2)
+
+                }
+                j++
+            }
+            newStr1 = newStr1.concat(newStr2);
+            console.log(newStr1);
+
+
+        }
+        sortString('iloveindia');
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #e6bec3, #e9d2d5);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    
+    .love {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    form {
+        display: flex;
+    }
+    
+    input {
+        padding: 15px;
+        border-radius: 30px;
+        outline: none;
+        border: 0;
+        margin-right: 10px;
+    }
+    
+    .btn {
+        padding: 15px 20px;
+        border-radius: 30px;
+        outline: none;
+        border: 0;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        /* margin-top: 10px;
+        margin-left: 250px; */
+    }
+    
+    .output {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="love">
+        <form action="">
+            <label for=""> Your name
+                <input type="text" name="your name">
+                <label for=""> Your Crush
+                    <input type="text" name="Crush name">
+
+              </label> <br>
+            <div class="output">
+                <button onclick="loveCal()" class="btn">Calculate Love</button>
+                <p id='demo'></p>
+
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function loveCal() {
+            var n = Math.random();
+            n = n * 100;
+            n = Math.floor(n) + 1;
+            console.log(n);
+            document.getElementById('demo').innerHTML = n + '%';
+        }
+        loveCal();
+    </script>
+
+</body>
+
+</html>

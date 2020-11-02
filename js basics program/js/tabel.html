@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        {
+            var x = 24,
+                table1, table2, table3,
+                result1 = '',
+                result2 = '',
+                result3 = '',
+                y = x + 2,
+                z = x + 3;
+
+            for (i = 1; i <= 10; i++) {
+                table1 = x * i;
+                result1 = result1 + table1 + ' ';
+                table2 = y * i;
+                result2 = result2 + table2 + ' ';
+                table3 = z * i;
+                result3 = result3 + table3 + ' ';
+
+
+                //console.log(result);
+            }
+            console.log(result1.trim());
+            console.log(result2.trim());
+            console.log(result3.trim());
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>

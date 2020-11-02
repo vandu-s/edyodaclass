@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mobile(model_no, size, batteryBackup) {
+
+            this.model = model_no;
+            this.ram = size;
+            this.battery = batteryBackup,
+                this.price = function(amount) {
+                    return 'price=' + amount;
+                }
+
+
+        }
+        var samsung = new mobile('Galaxy', '4GB', '14hour');
+        var nokia = new mobile('nokia lumia', '6GB', '10hour');
+
+        console.log('model=' + samsung.model + ' ' + ' ram=' + samsung.ram + ' batterybackup= ' + samsung.battery + ' ' +
+            samsung.price(1000));
+        console.log('model=' + nokia.model + ' ' + ' ram=' + nokia.ram + ' batterybackup= ' + nokia.battery + ' ' +
+            samsung.price(1000));
+    </script>
+
+</body>
+
+</html>

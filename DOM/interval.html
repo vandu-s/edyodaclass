@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        #container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            transition: all 1s ease-in;
+            /* background: linear-gradient(45deg, #616161, #9bc5c3); */
+        }
+        
+        #countdown {
+            font-size: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="countdown"> </h1>
+    </div>
+    <script>
+        function randomAngle() {
+            return Math.floor(Math.random() * 361) +
+                'deg';
+        }
+
+        function randomColorCode() {
+            return 'rgb(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')';
+        }
+        var textWrapper = document.getElementById('container');
+        var counterElement = document.getElementById('countdown');
+        var startcount = 10;
+        var counterId = setInterval(function() {
+            console.log('calling');
+            if (startcount >= 0) {
+                // var textNode = document.createTextNode(startcount);
+                // counterElement.appendChild(textNode);
+                counterElement.innerHTML = startcount;
+                counterElement.style.color = randomColorCode();
+                // textWrapper.style.background = 'linear-gradient(' + randomAngle() + ', #616161, #9bc5c3)';
+                console.log(startcount--)
+
+            } else {
+                window.clearInterval(counterId);
+            }
+        }, 1000);
+        var startcount1 = 26;
+        var counterId1 = setInterval(function() {
+            console.log('calling');
+            if (startcount1 >= 0) {
+                // var textNode = document.createTextNode(startcount);
+                // counterElement.appendChild(textNode);
+                // counterElement.innerHTML = startcount;
+                textWrapper.style.background = 'linear-gradient(' + randomAngle() + ', #616161, #9bc5c3)';
+                console.log(startcount1--)
+
+            } else {
+                window.clearInterval(counterId1);
+            }
+        }, 400);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.clear();
+        var number = prompt('Enter a three-digit positive integer: ');
+        var sum = ' ';
+        console.log(number)
+        var remainder;
+        var temp = number;
+        while (temp > 0) {
+            remainder = temp % 10;
+            sum += remainder;
+            temp = parseInt(temp / 10);
+
+        }
+        console.log(sum.trim());
+    </script>
+
+</body>
+
+</html>

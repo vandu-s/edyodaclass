@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var anoy = function() {
+            console.log('Hello i m anonymous fun')
+        }
+        anoy();
+        //   anyoy function as argument
+
+        function disp(value) {
+            return value();
+        }
+        (disp(function() {
+            return console.log('hello i m');
+        }));
+        // return anyoy function
+        function addition(a) {
+            return function(b) {
+                return a + b;
+            }
+        }
+        var sum = addition(10);
+        console.log(sum(80));
+    </script>
+
+</body>
+
+</html>

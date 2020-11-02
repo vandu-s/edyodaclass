@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var number = prompt('Enter a three-digit positive integer: ');
+        var sum = 0;
+        console.log(number);
+        var temp, remainder, result = 0,
+            result2 = 0;
+        temp = number;
+        while (temp > 0) {
+            remainder = temp % 10;
+            result = remainder + result;
+            temp = parseInt(temp / 10);
+        }
+        //console.log(result);
+        while (result > 0) {
+            remainder = result % 10;
+            result2 = remainder + result2;
+            result = parseInt(result / 10);
+
+        }
+        console.log(result2);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function display(arg) {
+        //     console.log(arg(90, 40));
+        // }
+        // display(function(a, b) {
+        //     let sum = a + b;
+        //     console.log('helo');
+
+        //     return sum;
+        // });
+        setTimeout(function() {
+            console.log('i m asynrouse function')
+        }, 5000);
+        console.log('end');
+        var num = 3;
+
+        var count = setInterval(function() {
+            console.log('calling')
+            if (num >= 0) {
+                console.log(num--)
+
+            } else {
+                clearInterval(count);
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
