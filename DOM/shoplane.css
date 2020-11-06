@@ -16,7 +16,7 @@ body {
     color: rgb(27, 25, 25);
 }
 
-#card-wrapper {
+.card-wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -73,4 +73,16 @@ body {
     font-size: 15px;
     letter-spacing: 2px;
     color: #009688;
+}
+
+@media (max-width:768px) {
+    .card {
+        width: calc(50% - 22px);
+    }
+}
+
+@media (max-width:400px) {
+    .card {
+        width: calc(100% - 22px);
+    }
 }

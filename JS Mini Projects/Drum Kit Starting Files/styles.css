@@ -15,19 +15,33 @@ footer {
     font-family: sans-serif;
 }
 
-.w {}
+.w {
+    background: url('./images/tom1.png') no-repeat;
+}
 
-.a {}
+.a {
+    background: url('./images/tom2.png') no-repeat;
+}
 
-.s {}
+.s {
+    background: url('./images/tom3.png') no-repeat;
+}
 
-.d {}
+.d {
+    background: url('./images/tom4.png') no-repeat;
+}
 
-.j {}
+.j {
+    background: url('./images/snare.png') no-repeat;
+}
 
-.k {}
+.k {
+    background: url('./images/crash.png') no-repeat;
+}
 
-.l {}
+.l {
+    background: url('./images/kick.png') no-repeat;
+}
 
 .set {
     margin: 10% auto;

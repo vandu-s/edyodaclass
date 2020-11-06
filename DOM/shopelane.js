@@ -232,7 +232,10 @@ var productList = [{
 ];
 
 function generateCard(data) {
-    var clothing = document.getElementById('card-wrapper');
+    var clothingCard = document.getElementById('clothing-card');
+    var isAccessory = document.getElementById('accessories-card');
+
+
     var card = document.createElement('div');
     card.className = 'card';
     var link = document.createElement('a');
@@ -259,15 +262,18 @@ function generateCard(data) {
     newPriceElement.innerHTML = data.price;
     newPriceElement.className = 'price';
 
-    details.appendChild(newPriceElement);
-    clothing.append(card);
+    if (data.isAccessory === false) {
+        clothingCard.appendChild(card);
 
+    } else if (data.isAccessory === true) {
+
+        isAccessory.appendChild(card);
+
+    }
+    return card;
 }
-
-for (i = 0; i < productList.length; i++) {
+for (i = 0; i <= productList.length; i++) {
     generateCard(productList[i]);
-
 }
-
 
 console.log(card);

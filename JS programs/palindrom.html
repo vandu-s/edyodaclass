@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function checkPalindram(str) {
+            //  str = str.toLowercase;
+            var newStr = '';
+            len = str.length;
+            var i = len;
+            for (i = len; i >= 0; i--) {
+                newStr += str.charAt(i);
+                // if (str.charAt(i) === newStr.charAt(i)) {
+                //     console.log('string is palindram');
+                // } else
+                //     console.log('string is palindram');
+
+
+
+
+            }
+            console.log('newstr=' + newStr);
+            console.log('=' + str);
+
+
+        }
+        checkPalindram(str = prompt('enter the string'));
+    </script>
+
+</body>
+
+</html>
