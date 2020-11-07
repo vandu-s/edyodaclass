@@ -1,0 +1,86 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #F2F4F8;
+    color: #424242;
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#table-btn {
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0091D4;
+    border: 2px solid #0091D4;
+    outline: 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    text-align: right;
+    cursor: pointer;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+}
+
+.keycode_display {
+    font-size: 16rem;
+    font-weight: 400;
+}
+
+#card_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 23%;
+    border: 1px solid #EAEAEA;
+    cursor: pointer;
+    transition: all 1s ease;
+    margin: 5px;
+}
+
+.event_details {
+    display: flex;
+    justify-content: center;
+    background-color: #B9E9FF;
+}
+
+.event_heading {
+    font-size: 12px;
+    padding: 5px 10px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.card_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.card_description {
+    font-size: 28px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 25px 20px rgba(0, 0, 0, 0.11);
+}
