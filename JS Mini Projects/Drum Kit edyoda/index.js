@@ -1,6 +1,6 @@
 var drumButtonLength = document.querySelectorAll('.btn').length;
 // console.log(drumButtonLength);
-// //var drumButtons = document.querySelectorAll('.btn');
+var drumButtons = document.querySelectorAll('.btn');
 document.body.onkeydown = function KeyPress(e) {
     makeSound2(e.key);
 
@@ -10,6 +10,8 @@ document.body.onkeydown = function KeyPress(e) {
 for (var i = 0; i <= drumButtonLength; i++) {
     document.querySelectorAll('.btn')[i].onclick = function() {
         var buttonInnerText = this.textContent;
+        drumButtons[i].style.border = '3px solid rgba(255, 255, 0, 0.836)';
+
         // console.log(buttonInnerText);
         makeSound1(buttonInnerText);
         //  buttonAnimation(buttonInnerText);
@@ -131,15 +133,3 @@ function makeSound2(key) {
             break;
     }
 }
-
-
-// function buttonAnimation(currentKey) {
-//     console.log(currentKey)
-//     var activeKey = document.querySelector('.' + currentKey);
-//     console.log(activeKey);
-
-//     // activeKey.classList.add('pressed');
-//     // setTimeout(function() {
-
-//     // })
-// }

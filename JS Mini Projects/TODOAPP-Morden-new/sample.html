@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App</title>
+    <script src="https://kit.fontawesome.com/cf98ff2373.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <main>
+        <h1>TODO App</h1>
+
+        <div id="main_container">
+
+            <form id="todo_form">
+                <div class="for-postion">
+                    <button id="btn-add-todo"><i class="fas fa-check"></i></button>
+
+                    <div class="input_wrapper">
+                        <input class="input-field" type="text" id="todo_input_field" placeholder="Add a TODO item">
+                    </div>
+                    <button id="btn-delete-todo"><i class="fas fa-times"></i></button>
+                </div>
+
+            </form>
+            <div id="todo-list">
+                <div id="first-elem" class="todo-item">
+                    <div class="horizontal-align todo-message-container">
+                        <h3 class="todo-message">Buy Apples</h3>
+
+                        <div>
+                            <i class="far fa-edit"></i>
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                    </div>
+
+                    <div class="horizontal-align todo-edit-container">
+                        <input class="edit-todo" type="text" placeholder="TODO Here" /><button>Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

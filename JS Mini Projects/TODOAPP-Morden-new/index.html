@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/35c398e458.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <div id="container">
+            <h1 class="heading">Today </h1>
+            <div id="todo-list">
+
+                <div id="completed_task" class="card">
+                    <div class="left-contain">
+                        <button class="checkbtn btn"><i class="fas fa-check "></i></button>
+                        <h3 class="todo-text">Make some thing Awesome</h3>
+                    </div>
+
+                    <button class="cross_btn btn"> <i class="fas fa-times cross_btn"></i> </button>
+                </div>
+
+                <div id="notcompleted_task" class="card">
+                    <div class="left-contain">
+                        <button class="checkbtn btn"><i class="fas fa-check "></i></button>
+                        <h3 class="todo-text">Make some thing Awesome</h3>
+                    </div>
+
+                    <button class="cross_btn btn"> <i class="fas fa-times cross_btn"></i> </button>
+                </div>
+            </div>
+            <div id="todo_input_container">
+                <input type="text" id="input_field" placeholder="What have for today?">
+                <button class="btn enter-btn"><i class="fas fa-angle-double-right"></i></button>
+            </div>
+        </div>
+
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
