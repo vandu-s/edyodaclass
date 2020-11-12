@@ -1,147 +1,97 @@
-var notCompleted = document.getElementById("not-completed");
-var inputField = document.getElementById("text-area");
-var form = document.getElementById("to-do-task");
-var addButton = document.getElementById("btn-add-todo");
-var completed = document.getElementById("completed");
-var overflowWrapper = document.getElementById("overflow-wrapper");
+var inputFleid = document.getElementById('input_field');
+var todoList = document.getElementById('todo-list');
+//console.log(inputFleid);
 
-function createCard(task) {
-    var card = document.createElement("div");
-    card.className = "card";
-    var checkBox = document.createElement("div");
-    checkBox.className = "check-box";
-    var checkIcon = document.createElement("input");
-    checkIcon.type = "checkbox";
-    checkIcon.className = "check-icon";
-    checkBox.appendChild(checkIcon);
-    var cardText = document.createElement("div");
-    cardText.className = "card-text";
-    var text = document.createElement("h3");
-    text.className = "text";
-    text.innerText = task;
-    var crossIcon = document.createElement("i");
-    crossIcon.className = "fas fa-times delete-icon";
-    cardText.appendChild(text);
-    card.appendChild(checkBox);
-    card.appendChild(cardText);
-    card.appendChild(crossIcon);
-    crossIcon.onclick = function(e) {
-        card.remove();
-        if (
-            notCompleted.childNodes.length === 0 &&
-            completed.childNodes.length === 0
-        ) {
-            overflowWrapper.className = "none";
+function createTodoCard(msg) {
+    // <div id="completed_task" class="card">
+    // <div class="left-contain">
+    //     <button class="checkbtn btn"><i class="fas fa-check "></i></button>
+    //     <h3 class="todo-text">Make some thing Awesome</h3>
+    // </div>
+    // <button class="cross_btn btn"> <i class="fas fa-times "></i> </button>
+    // </div>
+    var compeltedTask = document.getElementById('completed_task');
+    var todoCard = document.createElement('div');
+    todoCard.className = 'card shadowonactivelist';
+
+    //todoCard.id = 'completed_task';
+    todoCard.id = new Date().getTime();
+
+    var leftContainer = document.createElement('div');
+    leftContainer.className = 'left-contain';
+    todoCard.appendChild(leftContainer);
+
+    var checkButton = document.createElement('button');
+    checkButton.className = 'checkbtn btn';
+    leftContainer.appendChild(checkButton);
+
+
+
+    var todoText = document.createElement('h3');
+    todoText.className = 'todo-text';
+    todoText.innerHTML = msg;
+    leftContainer.appendChild(todoText);
+
+    var crossButton = document.createElement('button');
+    crossButton.className = 'cross_btn btn';
+    todoCard.appendChild(crossButton);
+    crossButton.onclick = function() {
+            document.getElementById(todoCard.id).remove();
+
         }
-    };
+        // <button class="cross_btn btn"> <i class="fas fa-times "></i> </button> -->
 
-    checkIcon.onclick = completedTasks;
 
-    return card;
+    var crossButtonIcon = document.createElement('i');
+    crossButtonIcon.className = 'fas fa-times ';
+    crossButton.appendChild(crossButtonIcon);
+
+    todoList.appendChild(todoCard);
+    console.log(todoCard);
+
+    var checkButtonIcon = document.createElement('i');
+    checkButtonIcon.className = 'fas fa-check';
+    checkButton.appendChild(checkButtonIcon);
+    checkButton.addEventListener('click', function() {
+        // checkButtonIcon.style.color = '#3FE599';
+        // document.getElementById(todoCard.id).style.textDecoration = 'line-through';
+        // document.getElementById(todoCard.id).todoText.style.color = 'red';
+        // var parent = this.parentNode;
+        // console.log(parent)
+        // parent.remove();
+        // compeltedTask.appendChild(parent);
+        // checkButtonIcon.style.color = '#3FE599';
+        // crossButton.style.display = 'none';
+        // crossButton.className = 'far fa-trash-alt';
+
+    })
+
+
+    return todoCard;
+
+
 }
 
-function AddTask() {
-    var card = createCard(inputField.value);
-    notCompleted.appendChild(card);
-    inputField.value = null;
-    if (notCompleted.childNodes.length === 0) {
-        overflowWrapper.className = "none";
+
+function handleTodoCreation() {
+    if ((inputFleid.value !== null) && (inputFleid.value !== 0) && (inputFleid.value !== undefined) && (inputFleid.value !== '')) {
+        todoList.appendChild(createTodoCard(inputFleid.value));
     } else {
-        overflowWrapper.className = "for-shadow";
+        alert('Please Insert Valid Value');
+
     }
+    inputFleid.value = '';
+
 }
 
-inputField.onkeyup = function(e) {
-    if (e.key === "Enter" && e.target.value.length !== 0) {
-        AddTask();
-    } else if (e.target.value.length == 0) {
-        errorHandler();
+var todoInputButton = document.getElementById('todo-insert-btn');
+todoInputButton.addEventListener('click', function() {
+    handleTodoCreation();
+})
+
+inputFleid.onkeydown = function(e) {
+    if (e.key === 'Enter') {
+        handleTodoCreation();
     }
-};
 
-addButton.onclick = function(e) {
-    if (inputField.value.length !== 0) {
-        AddTask();
-    } else {
-        errorHandler();
-    }
-};
-
-function errorHandler() {
-    errorPopup();
-    errorBulb();
-}
-var check = document.getElementsByClassName("check-icon");
-
-function completedTasks(e) {
-    if (e.target.checked === true) {
-        var card = e.target.parentElement.parentElement;
-        var newDeleteIcon = document.createElement("i");
-        newDeleteIcon.className = "far fa-trash-alt delete-icon";
-
-        newDeleteIcon.onclick = function() {
-            card.remove();
-            if (
-                notCompleted.childNodes.length === 0 &&
-                completed.childNodes.length === 0
-            ) {
-                overflowWrapper.className = "none";
-            }
-        };
-        card.replaceChild(newDeleteIcon, card.childNodes[2]);
-        card.childNodes[0].childNodes[0] = true;
-        // card.childNodes[0].childNodes[0].removeEventListener(onclick,  completedTasks)
-
-        notCompleted.removeChild(card);
-
-        completed.appendChild(card);
-
-        e.target.disabled = true;
-    }
-}
-
-var wrapper = document.createElement("i");
-wrapper.className = "far fa-comment-alt pop-up";
-var text = document.createElement("div");
-text.id = "popup-text";
-text.innerText = "Enter a task to add";
-var exclamation = document.createElement("div");
-exclamation.id = "error-icon";
-var divWrapper = document.createElement("div");
-divWrapper.id = "div-wrapper";
-divWrapper.appendChild(wrapper);
-divWrapper.appendChild(text);
-form.appendChild(divWrapper);
-form.appendChild(exclamation);
-divWrapper.style.display = "none";
-exclamation.style.display = "none";
-
-function errorPopup() {
-    // var exclamation = document.getElementById("error-icon")
-    // var divwrapper = document.getElementById("div-wrapper")
-    var bulbGlow = setInterval(errorBulb, 2000);
-    divWrapper.style.display = "block";
-    inputField.onkeydown = function(e) {
-        clearInterval(bulbGlow);
-        divWrapper.style.display = "none";
-        if (e.key === "Enter") {
-            exclamation.style.display = "none";
-        }
-    };
-    addButton.onclick = function(e) {
-        if (inputField.value.length !== 0) {
-            exclamation.style.display = "none";
-            AddTask();
-        } else {
-            errorHandler();
-        }
-    };
-    exclamation.style.display = "block";
-}
-
-function errorBulb() {
-    exclamation.className = "far fa-lightbulb";
-    setTimeout(function() {
-        exclamation.className = "fas fa-lightbulb";
-    }, 1000);
 }

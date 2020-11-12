@@ -35,6 +35,11 @@ main {
     display: flex;
 }
 
+.right_contain {
+    display: flex;
+    justify-content: space-between;
+}
+
 .card {
     display: flex;
     justify-content: space-between;
@@ -64,9 +69,13 @@ main {
     padding: 0 15px;
 }
 
+.delete_btn {
+    color: #dad1d1;
+}
+
 .cross_btn {
     color: #dad1d1;
-    padding: 0px 10px;
+    padding: 0px 22px;
 }
 
 #todo_input_container {
@@ -104,4 +113,19 @@ main {
 
 .enter-btn i {
     font-size: 25px;
+}
+
+.shadowonactivelist {
+    box-shadow: 0 0 30px rgb(180, 174, 174);
+}
+
+.task_heading {
+    color: grey;
+}
+
+.completed_task {}
+
+.completed_task_h3 {
+    color: #E6E6E6;
+    text-decoration: line-through;
 }
