@@ -4,6 +4,7 @@ var NotCompletedTask = document.getElementById('notcompleted_task');
 var completedTask = document.getElementById('completed_task');
 console.log(NotCompletedTask);
 console.log(completedTask);
+var completedTaskHeading = document.getElementById('compeleted');
 
 
 
@@ -43,13 +44,19 @@ function createCard(msg) {
         // document.getElementById(todoCard.id).todoText.style.color = 'red';
         var parent = this.parentNode;
         console.log(parent)
-
+        completedTaskHeading.style.display = 'block';
         parent.remove();
         crossButton.style.display = 'none';
+        todoText.style.color = 'rgb(224, 217, 217)';
         parent.appendChild(deleteButton);
-
         parent.style.textDecoration = 'line-through';
-        parent.style.color = 'red';
+        parent.style.position = 'relative';
+        deleteButton.style.position = 'absolute';
+        deleteButton.style.top = '20px';
+        deleteButton.style.right = '10px';
+
+
+        parent.style.color = 'rgb(193, 187, 187)';
         parent.style.borderBottom = '1px solid #E0E0E0'
         deleteButton.onclick = function() {
             parent.remove()
@@ -60,9 +67,6 @@ function createCard(msg) {
         // crossButton.className = 'far fa-trash-alt';
 
     })
-
-
-
 
     var checkButtonIcon = document.createElement('i');
     checkButtonIcon.className = 'fas fa-check ';
