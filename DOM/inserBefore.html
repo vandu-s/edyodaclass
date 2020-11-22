@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3> Web Langauges </h3>
+    <ul id="myul">
+        <li>HTML</li>
+        <li id="refrencenode">CSS</li>
+        <li id="reactNode">React</li>
+        <li id="dbmsNode">DBMS</li>
+
+        <li>NODEJS</li>
+
+
+    </ul>
+
+    <script>
+        var newLi = document.createElement('li');
+        newLi.textContent = 'JAVA SCRIPT';
+        var parentNode = document.getElementById('myul');
+        var referenceNode = document.getElementById('refrencenode');
+        parentNode.insertBefore(newLi, referenceNode);
+        var reactNode = document.getElementById('reactNode');
+
+        var dbmsNode = document.getElementById('dbmsNode');
+        parentNode.insertBefore(dbmsNode, reactNode);
+    </script>
+</body>
+
+</html>

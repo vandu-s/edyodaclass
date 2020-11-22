@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mydiv">
+        <h1 id="h1">learnin js h1</h1>
+        <h3>I m H3</h3>
+        <h2 id="h2node">Edyoda digital university</h2>
+
+    </div>
+
+    <span id="span">my name is span</span>
+
+    <script>
+        var wrapper = document.getElementById('mydiv');
+        var h2Node = document.getElementById('h2node');
+        var spanNode = document.getElementById('span');
+        h2Node.setAttribute('title', 'paragraph');
+        // h2Node.firstChild.appendData(' india');
+        // h2Node.firstChild.insertData(7, 'best ');
+        // h2Node.firstChild.deleteData(0, 6);
+        // h2Node.firstChild.replaceData(0, 6, 'wrost');
+        console.log(h2Node.firstChild.substringData(0, 6));
+
+
+        // console.log(h2Node.firstChild);
+    </script>
+</body>
+
+</html>

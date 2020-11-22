@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html id='myhtml' lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading" class="main-headings" src='www.google.com'>
+        Hello world learning js
+        <!--comment heading i m-->
+        <em>hello world</em>
+        <span>hello world i m span tag</span>
+    </h1>
+    <p id="para">I m paragraph</p>
+
+
+    <script>
+        var heading = document.getElementById('heading');
+        var childrens = heading.children;
+        var len = heading.children.length;
+        // console.log(len);
+        console.log(childrens[0]);
+        console.log(childrens[1]);
+    </script>
+
+</body>
+
+</html>

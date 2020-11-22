@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html id='myhtml' lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading" class="main-headings" src='www.google.com'>Hello world learning js
+        <!--comment heading-->
+        <span>hello world i m span tag</span>
+    </h1>
+    <p id="para">I m paragraph</p>
+
+
+    <script>
+        var myhead = document.getElementById('myhtml');
+        var parent1 = myhead.parentNode;
+        console.log(parent1);
+
+
+        var h1Tag = document.getElementById('heading');
+        var parent2 = h1Tag.parentElement;
+        console.log(parent2);
+
+        for (var i = 0; i < h1Tag.attributes.length; i++) {
+            document.write(h1Tag.attributes[i].name + "=");
+            document.write(h1Tag.attributes[i].value + "<br>");
+
+
+        }
+        // console.log(h1Tag.firstChild.nodeName);
+        // console.log(h1Tag.firstChild.nodeValue);
+        // console.log(h1Tag.firstChild.nodeType);
+
+        // console.log(h1Tag.firstChild.nextSibling.nodeName);
+        // console.log(h1Tag.firstChild.nextSibling.nodeValue);
+        // console.log(h1Tag.firstChild.nextSibling.nodeType);
+    </script>
+
+</body>
+
+</html>

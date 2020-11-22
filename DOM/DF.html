@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DF</title>
+</head>
+
+<body>
+    <div id="mydiv">
+
+    </div>
+
+
+    <script>
+        // var df = document.createDocumentFragment();
+        // // console.log(df);
+
+        // var pNode = document.createElement('p');
+        // pNode.textContent = 'i m p node';
+        // var hNode = document.createElement('h1');
+        // hNode.textContent = 'i m h node';
+
+        // df.appendChild(pNode);
+        // df.appendChild(hNode);
+        // console.log(df);
+
+        var targetNode = document.getElementById('mydiv');
+        // div.appendChild(df);
+        targetNode.appendChild(document.createTextNode('hello'));
+        targetNode.appendChild(document.createTextNode(' my name'));
+        targetNode.appendChild(document.createTextNode(' is vandana'));
+        console.log(targetNode.childNodes);
+        targetNode.normalize();
+    </script>
+</body>
+
+</html>

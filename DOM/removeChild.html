@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3> Web Langauges </h3>
+    <div id="parent">
+        <ul id="myul">
+            <li>HTML</li>
+            <li id="refrencenode">CSS</li>
+            <li id="reactNode">React</li>
+            <li id="dbmsNode">DBMS</li>
+
+            <li>NODEJS</li>
+
+
+        </ul>
+    </div>
+
+    <script>
+        var parentNode = document.getElementById('parent');
+        var myUl = document.getElementById('myul')
+        var delNode = myUl.removeChild(myUl.firstElementChild);
+        myUl.firstElementChild.insertAdjacentElement('beforeend', delNode);
+
+        console.log(myUl);
+    </script>
+</body>
+
+</html>

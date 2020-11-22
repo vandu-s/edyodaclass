@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass1 {
+            background-color: rgb(90, 73, 40);
+        }
+        
+        .myclass2 {
+            background-color: green;
+        }
+        
+        .myclass3 {
+            background-color: rgb(13, 0, 128);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="my" class="myclass1 myclass2">Vandana Rupesh Hatnapure </h1>
+
+    <script>
+        var parent = document.getElementById('my');
+        var elementClassList = parent.classList;
+        console.log(elementClassList.toggle('myclass3'));
+        console.log(elementClassList.toggle('myclass3'));
+
+        console.log(parent);
+    </script>
+</body>
+
+</html>

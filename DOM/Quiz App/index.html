@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-5</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="quiz">The Quiz App</div>
+    <div class="flex-margin">
+        <form class="box" method="POST" name="quiz" onsubmit="return false">
+            <div class="q1">
+                <span class="question"> Q1. Which was not one of Voldemort's Horcruxes? </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans1" value="1">
+          <label class=""> Harry </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans1" value="2">
+          <label class=""> Nagini </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans1" value="3">
+          <label class=""> Helga's Diedem </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans1" value="4">
+          <label class=""> Tom Riddle's Diary </label>
+          </span>
+            </div>
+
+            <div class="q1">
+                <span class="question"> Q2. Which of these are not Hagrid's many pets? </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans2" value="1">
+          <label class=""> Grawp </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans2" value="2">
+          <label class=""> Fluffy </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans2" value="3">
+          <label class=""> Aragog </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans2" value="4">
+          <label class=""> Noberta </label>
+          </span>
+            </div>
+
+            <div class="q1">
+                <span class="question"> Q3. Which class did Severus Snape always want to teach? </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans3" value="1">
+          <label class=""> Potions </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans3" value="2">
+          <label class=""> Charms</label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans3" value="3">
+          <label class=""> Defence Against Dark Arts </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans3" value="4">
+          <label class=""> Transfiguration </label>
+          </span>
+            </div>
+
+
+            <div class="q1">
+                <span class="question"> Q4. Which Hogwarts house did Moaning Myrtle belong in? </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans4" value="1">
+          <label class=""> Gryffindor </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans4" value="2">
+          <label class=""> Slytherin</label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans4" value="3">
+          <label class=""> Ravenclaw </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans4" value="4">
+          <label class=""> HufflePuff </label>
+          </span>
+            </div>
+
+            <div class="q1">
+                <span class="question"> Q5. What class did Neville end up teaching at Hogwarts? </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans5" value="1">
+          <label class=""> Astronomy </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans5" value="2">
+          <label class="">Herbology</label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans5" value="3">
+          <label class="">Charms </label>
+          </span>
+                <span class="flex-questions ">
+          <input class="radio_btn" type="radio" name="ans5" value="4">
+          <label class=""> Muggle Studies </label>
+          </span>
+            </div>
+            <button type="submit" class="btn" onclick="calcScore()">Submit</button>
+        </form>
+        <div class="score-box">
+            <span class="score-txt">Score:</span><br><br>
+            <span id="qzs" class="score-value"> 0 </span>
+            <span class="score-value"> /5 </span>
+        </div>
+    </div>
+
+    <script src="./index.js">
+    </script>
+</body>
+
+</html>
