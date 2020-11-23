@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>close</title>
+</head>
+
+<body>
+    <h1>Window open close</h1>
+    <button id="btn">Close new window</button>
+    <script>
+        var openWindow = window.open('', '', 'height=300,width=400');
+        openWindow.document.write('main new window hoo');
+        var btn = document.getElementById('btn')
+        btn.onclick = function() {
+            openWindow.document.close();
+            openwindow.close();
+        }
+    </script>
+
+
+</body>
+
+</html>

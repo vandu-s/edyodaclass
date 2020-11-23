@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event listener</title>
+    <style>
+        #wrapper {
+            height: 200px;
+            width: 300px;
+            background-color: indianred;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #btn {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <button id="btn">Click me</button>
+
+    </div>
+    <script>
+        var wrapper = document.getElementById('wrapper');
+
+        function show1() {
+            alert('i m clicked show1')
+        }
+
+        function show2() {
+            confirm('i m clicked at show2 fun');
+        }
+        wrapper.addEventListener('click', show1, false);
+
+        var btn = document.getElementById('btn');
+        // btn.addEventListener('click', show1, false);
+        btn.addEventListener('click', show2, false);
+
+        // btn.removeEventListener('click', show1, false);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="myp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, excepturi.</p>
+    <button id="btn">stop timeout</button>
+
+    <script>
+        var mypara = document.getElementById('myp');
+        var stopTimeout = setTimeout(function() {
+            mypara.style.backgroundColor = 'red';
+            mypara.style.fontSize = '25px';
+
+        }, 2000);
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', function() {
+            clearTimeout(stopTimeout);
+        })
+    </script>
+</body>
+
+</html>

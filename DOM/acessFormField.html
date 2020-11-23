@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="myform">
+        Username: <input type="text" name="myusername" id="username" value="username">
+        <br> <br> Password: <input type="password" name="Password" id="password">
+        <br> <br>
+        <input type="submit" name="mysubmit"> <br> <br>
+
+    </form>
+    <br>
+
+
+
+    <script>
+        // var username = document.getElementById('username');
+        // var username = document.myform.elements[0]
+        // var username = document.forms['myform'].elements[0]
+        var username = document.myform.elements['password']
+        console.log(username);
+        console.log(username.name);
+        console.log(username.type);
+        console.log(username.value);
+    </script>
+</body>
+
+</html>

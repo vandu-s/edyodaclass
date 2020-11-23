@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Window open close</h1>
+    <button id="btn">open window</button>
+    <button id="btn1">move window</button>
+    <button id="btn2">resize window</button>
+
+
+    <script>
+        var btn = document.getElementById('btn');
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+
+
+        function openWin() {
+            myWindow = window.open("", "", "width=100, height=100");
+        }
+
+        function resizeWin() {
+            myWindow.resizeBy(250, 250);
+            myWindow.focus();
+        }
+
+        function moveWin() {
+            myWindow.moveBy(250, 250);
+            myWindow.focus();
+        }
+
+
+
+        btn.addEventListener('click', openWin);
+        btn1.addEventListener('click', moveWin);
+        btn2.addEventListener('click', resizeWin);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #54c3ef;
+}
+
+#main_heading {
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 6rem;
+    color: #fff748;
+    text-shadow: 4px 4px 2px black;
+}
+
+#main_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.forms {
+    width: 35%;
+    padding: 1rem;
+    background-color: #2b3252;
+    color: white;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.form_fieldset {
+    display: block;
+    padding: 1rem 0.5rem 1rem 1rem;
+    border-radius: 15px;
+    margin: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ccc;
+}
+
+.form_group {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.form_fieldset label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.input_field {
+    padding: 10px;
+    width: 90%;
+    /* margin-bottom: 25px; */
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    font-size: 16px;
+}
+
+.error_msg_text {
+    margin-top: 10px;
+    display: none;
+    color: red;
+}
+
+input::placeholder {
+    font-size: 16px;
+}
+
+select {
+    outline: 0;
+    background-image: none;
+    font-size: 16px;
+}
+
+.d-block {
+    display: block;
+}
+
+.required input::after {
+    content: "*";
+}
+
+.btn {
+    text-align: center;
+    border-radius: 8px;
+    background-color: #fff748;
+    font-size: 15px;
+    padding: 12px 25px;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 400;
+    outline: 0;
+    text-transform: uppercase;
+    color: rgb(41, 38, 38);
+}
+
+.next_btn {
+    float: right;
+}
+
+#message {
+    width: 90%;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    margin-bottom: 10px;
+}
+
+#step1_form {
+    display: block;
+}
+
+#step2_form {
+    display: none;
+}
+
+#step3_form {
+    display: none;
+}
+
+#form_submit_msg {
+    background-color: #2b3252;
+    height: 300px;
+    width: 30%;
+    color: #fff748;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
