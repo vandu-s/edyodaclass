@@ -1,95 +1,7 @@
 var mainContainer = document.getElementById('main-container');
 var playListWrapper = document.getElementById('playlist-wrapper');
 var playerSection = document.getElementById('player-section');
-
-console.log(playListWrapper);
-var playlistData = [{
-        "id": "1",
-        "title": "Croissants | Flour and Stone",
-        "thumbnail": "https://i.vimeocdn.com/video/600595198_390x220.webp"
-    },
-    {
-        "id": "2",
-        "title": "Perfect Mashed Potatoes and Gravy",
-        "thumbnail": "https://i.vimeocdn.com/video/604150056_390x220.webp"
-    },
-    {
-        "id": "3",
-        "title": "The Heart of Soba",
-        "thumbnail": "https://i.vimeocdn.com/video/726986673_390x220.webp"
-    },
-    {
-        "id": "4",
-        "title": "Grilled Cheese 9 Ways",
-        "thumbnail": "https://i.vimeocdn.com/video/570486309_390x220.webp"
-    },
-    {
-        "id": "5",
-        "title": "Pineapple Cheesecake",
-        "thumbnail": "https://i.vimeocdn.com/video/602705517_390x220.webp"
-    },
-    {
-        "id": "6",
-        "title": "Lemony Chicken Noodle Soup",
-        "thumbnail": "https://i.vimeocdn.com/video/537261616_390x220.jpg"
-    },
-    {
-        "id": "7",
-        "title": "Pumpkin Roll",
-        "thumbnail": "https://i.vimeocdn.com/video/608805594_590x332.jpg"
-    },
-    {
-        "id": "8",
-        "title": "How to Brine a Turkey",
-        "thumbnail": "https://i.vimeocdn.com/video/601730519_590x332.jpg"
-    },
-    {
-        "id": "9",
-        "title": "Stop Motion Dry-Brined Turkey Recipe",
-        "thumbnail": "https://i.vimeocdn.com/video/456852083_590x332.jpg"
-    },
-    {
-        "id": "10",
-        "title": "Butternut Squash Ravioli",
-        "thumbnail": "https://i.vimeocdn.com/video/600328152_590x332.jpg"
-    }
-];
-
-function createPlaylistCard(obj) {
-    // <div id="card3" class="playlist-card">
-    //     <img class="thumbnail" src="https://i.vimeocdn.com/video/726986673_390x220.webp" />
-    //     <h3 class="video-card-title">The Heart of Soba</h3>
-    // </div>
-
-    var mainDiv = document.createElement('div');
-    mainDiv.id = 'card' + obj.id;
-    mainDiv.className = 'playlist-card';
-
-    var thumbnail = document.createElement('img');
-    thumbnail.src = obj.thumbnail;
-    thumbnail.className = 'thumbnail';
-
-    var title = document.createElement('h3');
-    title.className = 'video-card-title';
-    title.innerHTML = obj.title;
-
-    mainDiv.appendChild(thumbnail);
-    mainDiv.appendChild(title);
-    playListWrapper.appendChild(mainDiv);
-    mainDiv.addEventListener('click', function() {
-        for (j = 0; j < videoPlaySectionData.length; j++) {
-            videoPlaySectionDataFun(videoPlaySectionData[j]);
-        }
-        // alert('i m clicked');
-    });
-
-    return mainDiv;
-}
-
-for (i = 0; i < playlistData.length; i++) {
-    createPlaylistCard(playlistData[i]);
-}
-
+var playerWrapper = document.getElementById('player-wrapper');
 
 var videoPlaySectionData = [{
         "id": "1",
@@ -182,77 +94,21 @@ var videoPlaySectionData = [{
         "isSaved": true
     }
 ];
-var playerWrapper = document.getElementById('player-wrapper');
 
 function videoPlaySectionDataFun(msg) {
-
-
-    // {
-    //     "id": "10",
-    //     "title": "Butternut Squash Ravioli with Brown Butter Sage Sauce",
-    //     "description": "Get the recipe at http://bit.ly/ButternutRav.",
-    //     "views": 851029,
-    //     "vimeoId": 189860660,
-    //     "isLiked": true,
-    //     "isSaved": true
-    // }
-
-    //     <!-- <div id="player-wrapper">
-    //     <iframe id="video-player" src="https://player.vimeo.com/video/190062231" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-    //     <div>
-    //         <div id="video-actions">
-    //             <p><span id="views-count">98.4k</span> views</p>
-
-    //             <div>
-    //                 <i class="far fa-heart"></i>
-    //                 <i class="far fa-comment-alt"></i>
-    //                 <i class="far fa-bookmark"></i>
-    //             </div>
-    //         </div>
-    //         <h3 id="video-title">Croissants | Flour and Stone</h3>
-    //         <p id="video-description">There is no other way but to commit wholeheartedly to a relationship with a croissant. We have all found ourselves at the mercy of its allure. Here, in another epic film by the uber talented Nathan Rodger, our Erin divulges her
-    //             personal romance with The Croissant.</p>
-    //     </div>
-    // </div> -->
-
-    // var containerForVideoAction = document.createElement('div');
-    // playerWrapper.appendChild(containerForVideoAction);
-
-    // var videoTitle = document.createElement('h3');
-    // videoTitle.id = msg.id;
-    // videoTitle.innerHTML = msg.title;
-    // containerForVideoAction.appendChild(videoTitle);
-
-    // var videoDescription = document.createElement('p');
-    // videoDescription.id = 'video-description';
-    // videoDescription.innerHTML = msg.description;
-    // containerForVideoAction.appendChild(videoDescription);
-
-
-
-
-
-
-    var playerWrapper = document.createElement('div');
-    playerWrapper.id = 'player-wrapper';
-
-    playerSection.appendChild(playerWrapper);
+    var playerData = document.createElement('div');
+    playerWrapper.appendChild(playerData);
+    playerData.id = 'playerdata ' + msg.id;
 
     var iFrameForPlayer = document.createElement('iframe');
-    iFrameForPlayer.id = msg.id;
+    iFrameForPlayer.id = 'video-player ' + msg.id;
     iFrameForPlayer.src = 'https://player.vimeo.com/video/' + msg.vimeoId;
     iFrameForPlayer.style.border = '0';
 
-    playerWrapper.appendChild(iFrameForPlayer);
-
-
-
-
+    playerData.appendChild(iFrameForPlayer);
 
     var containerForVideoAction = document.createElement('div');
-    playerWrapper.appendChild(containerForVideoAction);
-    // playerWrapper.appendChild(containerForVideoAction);
+    playerData.appendChild(containerForVideoAction);
 
     var videoAction = document.createElement('div');
     videoAction.id = 'video-actions';
@@ -265,11 +121,6 @@ function videoPlaySectionDataFun(msg) {
     viewCountSpan.id = 'views-count';
     viewCountSpan.innerHTML = msg.views;
     viewCountWrapper.innerHTML = 'views';
-    // childNode[4].parentNode.insertBefore(childNode[4], childNode[3]);
-    // console.log(viewCountWrapper.childNodes);
-
-    // childNodes[1].viewCountWrapper.insertBefore(childNodes[1], childNodes[0]);
-    // console.log(viewCountWrapper.childNodes)
 
     viewCountWrapper.appendChild(viewCountSpan);
 
@@ -298,5 +149,119 @@ function videoPlaySectionDataFun(msg) {
     videoDescription.innerHTML = msg.description;
     containerForVideoAction.appendChild(videoDescription);
 
-
 }
+
+
+
+var playlistData = [{
+        "id": "1",
+        "title": "Croissants | Flour and Stone",
+        "thumbnail": "https://i.vimeocdn.com/video/600595198_390x220.webp"
+    },
+    {
+        "id": "2",
+        "title": "Perfect Mashed Potatoes and Gravy",
+        "thumbnail": "https://i.vimeocdn.com/video/604150056_390x220.webp"
+    },
+    {
+        "id": "3",
+        "title": "The Heart of Soba",
+        "thumbnail": "https://i.vimeocdn.com/video/726986673_390x220.webp"
+    },
+    {
+        "id": "4",
+        "title": "Grilled Cheese 9 Ways",
+        "thumbnail": "https://i.vimeocdn.com/video/570486309_390x220.webp"
+    },
+    {
+        "id": "5",
+        "title": "Pineapple Cheesecake",
+        "thumbnail": "https://i.vimeocdn.com/video/602705517_390x220.webp"
+    },
+    {
+        "id": "6",
+        "title": "Lemony Chicken Noodle Soup",
+        "thumbnail": "https://i.vimeocdn.com/video/537261616_390x220.jpg"
+    },
+    {
+        "id": "7",
+        "title": "Pumpkin Roll",
+        "thumbnail": "https://i.vimeocdn.com/video/608805594_590x332.jpg"
+    },
+    {
+        "id": "8",
+        "title": "How to Brine a Turkey",
+        "thumbnail": "https://i.vimeocdn.com/video/601730519_590x332.jpg"
+    },
+    {
+        "id": "9",
+        "title": "Stop Motion Dry-Brined Turkey Recipe",
+        "thumbnail": "https://i.vimeocdn.com/video/456852083_590x332.jpg"
+    },
+    {
+        "id": "10",
+        "title": "Butternut Squash Ravioli",
+        "thumbnail": "https://i.vimeocdn.com/video/600328152_590x332.jpg"
+    }
+]
+
+
+
+function createPlaylistCard(obj, pos) {
+    // <div id="card3" class="playlist-card">
+    //     <img class="thumbnail" src="https://i.vimeocdn.com/video/726986673_390x220.webp" />
+    //     <h3 class="video-card-title">The Heart of Soba</h3>
+    // </div>
+
+    var mainDiv = document.createElement('div');
+    mainDiv.id = 'card' + obj.id;
+    mainDiv.className = 'playlist-card';
+
+    var thumbnail = document.createElement('img');
+    thumbnail.src = obj.thumbnail;
+    thumbnail.className = 'thumbnail';
+
+    var title = document.createElement('h3');
+    title.className = 'video-card-title';
+    title.innerHTML = obj.title;
+
+    mainDiv.appendChild(thumbnail);
+    mainDiv.appendChild(title);
+    playListWrapper.append(mainDiv)
+    mainDiv.addEventListener('click', function() {
+        for (j = 0; j < videoPlaySectionData.length; j++) {
+            videoPlaySectionDataFun(videoPlaySectionData[j]);
+        }
+        alert('i m clicked');
+
+    });
+
+    return mainDiv;
+}
+
+for (i = 0; i < playlistData.length; i++) {
+    createPlaylistCard(playlistData[i]);
+}
+
+console.log(playerSection);
+
+
+
+/* <div id="playerdata">
+<iframe id="video-player" src="https://player.vimeo.com/video/190062231" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<div>
+    <div id="video-actions">
+        <p><span id="views-count">98.4k</span> views</p>
+
+        <div>
+            <i class="far fa-heart"></i>
+            <i class="far fa-comment-alt"></i>
+            <i class="far fa-bookmark"></i>
+        </div>
+    </div>
+    <h3 id="video-title">Croissants | Flour and Stone</h3>
+    <p id="video-description">There is no other way but to commit wholeheartedly to a relationship with a croissant. We have all found ourselves at the mercy of its allure. Here, in another epic film by the uber talented Nathan Rodger, our Erin divulges
+        her personal romance with The Croissant.</p>
+</div>
+</div> */
