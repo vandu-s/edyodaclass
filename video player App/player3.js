@@ -120,7 +120,7 @@ function videoPlaySectionDataFun(msg) {
     var viewCountSpan = document.createElement('span');
     viewCountSpan.id = 'views-count';
     viewCountSpan.innerHTML = msg.views;
-    viewCountWrapper.innerHTML = 'views';
+    viewCountWrapper.innerHTML = 'views ';
 
     viewCountWrapper.appendChild(viewCountSpan);
 
@@ -204,7 +204,7 @@ var playlistData = [{
         "thumbnail": "https://i.vimeocdn.com/video/600328152_590x332.jpg"
     }
 ]
-
+var card = document.getElementById('card');
 
 
 function createPlaylistCard(obj, pos) {
@@ -227,41 +227,27 @@ function createPlaylistCard(obj, pos) {
 
     mainDiv.appendChild(thumbnail);
     mainDiv.appendChild(title);
-    playListWrapper.append(mainDiv)
-    mainDiv.addEventListener('click', function() {
-        for (j = 0; j < videoPlaySectionData.length; j++) {
-            videoPlaySectionDataFun(videoPlaySectionData[j]);
-        }
-        alert('i m clicked');
+    playListWrapper.appendChild(mainDiv)
+    mainDiv.onclick = function() {
+        var cardID = this.id;
+        console.log(cardID);
+    }
 
-    });
+    //     const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+    // const result = words.filter(word => word.length > 6);
+
+    // console.log(result);
+
 
     return mainDiv;
 }
+// for (j = 0; j < videoPlaySectionData.length; j++) {
+//     videoPlaySectionDataFun(videoPlaySectionData[j]);
+// }
 
 for (i = 0; i < playlistData.length; i++) {
     createPlaylistCard(playlistData[i]);
 }
 
-console.log(playerSection);
-
-
-
-/* <div id="playerdata">
-<iframe id="video-player" src="https://player.vimeo.com/video/190062231" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-<div>
-    <div id="video-actions">
-        <p><span id="views-count">98.4k</span> views</p>
-
-        <div>
-            <i class="far fa-heart"></i>
-            <i class="far fa-comment-alt"></i>
-            <i class="far fa-bookmark"></i>
-        </div>
-    </div>
-    <h3 id="video-title">Croissants | Flour and Stone</h3>
-    <p id="video-description">There is no other way but to commit wholeheartedly to a relationship with a croissant. We have all found ourselves at the mercy of its allure. Here, in another epic film by the uber talented Nathan Rodger, our Erin divulges
-        her personal romance with The Croissant.</p>
-</div>
-</div> */
+// console.log(playerSection);

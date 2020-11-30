@@ -1,0 +1,55 @@
+body {
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+#loader {
+    display: none;
+}
+
+#form_wrapper {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form {
+    width: 300px;
+    background-color: lavenderblush;
+    margin: 0 auto;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+#login-form p {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.ibox {
+    width: 100%;
+}
+
+.submit {
+    margin-top: 18px;
+    background-color: blue;
+    color: white;
+    border-color: blue;
+    border-radius: 5px;
+    padding: 5px 12px;
+}
+
+#login-form input {
+    padding: 5px 8px;
+    font-size: 16px;
+    outline: 0;
+}
